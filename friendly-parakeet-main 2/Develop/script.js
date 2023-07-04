@@ -38,5 +38,52 @@ function writePassword() {
 
 }
 
+function generatePassword() {
+  let password =""; 
+
+var userChoice = window.prompt("How many characters would you like your password to contain?");
+console.log(userChoice); 
+if (validatePasswordLength(userChoice)=== false) {
+  return "Please try again"
+}
+
+const answer = confirm("Click 'OK' to confirm including special characters"); 
+  if (answer) {
+    console.log("User wants special characters");
+    var allSpecialCharacters= specialCharacters.join("")
+    password += allSpecialCharacters
+  }
+
+
+const isNumericAnswer = confirm("Click 'OK' to confirm including numeric characters"); 
+  if (isNumericAnswer) {
+    console.log("User wants numeric characters");
+    var allNumeric = numeric.join("")
+    password += allNumeric
+  }
+
+
+const isLowerCaseAnswer = confirm("Click 'OK' to confirm including lowercase characters"); 
+  if (isLowerCaseAnswer) {
+    console.log("User wants lowercase characters");
+    var allLowerCase = lowerCaseLetters.join("")
+    password += allLowerCase
+  }
+
+
+const isUpperCaseAnswer = confirm("Click 'OK' to confirm including uppercase characters"); 
+  if (isUpperCaseAnswer) {
+    console.log("User wants uppercase characters");
+    var allUpperCase = upperCaseLetters.join("")
+    password += allUpperCase
+  }
+  console.log(password)
+  let text= ""
+  for (let i = 0; i < parseInt(userChoice); i++) {
+    text += password.charAt(Math.floor(Math.random() * password.length));
+  }
+  console.log(text)
+  return text;
+}
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
