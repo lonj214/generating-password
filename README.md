@@ -7,19 +7,6 @@
 - This gives users a password that is safe to use, and that will keep other people from hacking their accounts. This allows the user to choose the length and what characters they want to include in their password. 
 - During this project I learned how to use array's, strings, for loops, if/else statements, console.logs, constants, and JavaScript functions.
 
-## Installation
-
-- I began by downloading the zipped starter code.
-- I then created my own GitHub repository named 'password-generator'.
-- I added the starter code to my GitHub repo.
-- I cloned my GitHub repo into my local terminal and began to work on the JavaScript file in VS Code.
-- I started with my 'const' that has all the possibilites for the password. Including the length, special characters, lower case letters, upper case letters, and numbers.
-- I created a minimum of 8 and a maximum of 128 characters long. I made a function for this that will prompt users about how many characters they would like. I set up an alert that will notify users if they do not meet the minimum and maximum requirements of the password length. In the box it will return with "Please try again".
-- If the user puts in characters that are not a number it will alert them with 'Needs to be a number'. I did this by using 'isNaN'. So, if the user does this the box will return with "Please try again".
-- I created a series of prompts that will ask the user if they would like to use special characters, upper case, lower case, and numbers in their password. These are all nested in a function called generatePassword. The prompts are in 'if' statements that will console log as true or false. If the user confirms the statment it will be true, or if the user cancel's the statement it will log as false.
-- I created a 'for loop' that will take what the user's input for their preferences and generate a password.
-- This was all done by creating a function for the 'generateBtn'.
-
 
 ## Usage
 
